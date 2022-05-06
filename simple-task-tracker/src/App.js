@@ -16,12 +16,16 @@ function App() {
             "day": "Feb 6th at 1:30pm",
             "reminder": true
         },
-    
     ])
+
+
+    const deleteTask = (id) => {
+        console.log('delete', id);
+    }
     return (
         <div className="container">
-            <Header/>
-            <Tasks tasks={tasks}/>
+            <Header />
+            <Tasks tasks={tasks} onDelete={deleteTask} />
         </div>
     );
 }
