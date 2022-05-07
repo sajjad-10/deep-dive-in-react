@@ -10,6 +10,8 @@ const AddTask = ({onAdd}) => {
             alert('Please ass a Task');
             return
         }
+
+        onAdd({text, day , reminder})
     }
 
     return (
