@@ -6,7 +6,10 @@ const AddTask = ({onAdd}) => {
     const [reminder, setReminder] = useState(false);
     const onSubmit =(e)=>{
         e.preventDefault()
-
+        if (!text) {
+            alert('Please ass a Task');
+            return
+        }
     }
 
     return (
