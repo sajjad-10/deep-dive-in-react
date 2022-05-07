@@ -20,7 +20,7 @@ function App() {
         },
     ]);
 
-    const AddTask = (task)=>{
+    const addTask = (task)=>{
         console.log(task);
     }
 
@@ -38,7 +38,7 @@ function App() {
     return (
         <div className="container">
             <Header />
-            <AddTask onAdd={AddTask} />
+            <AddTask onAdd={addTask} />
             {tasks.length > 0 ? (
                 <Tasks
                     tasks={tasks}
