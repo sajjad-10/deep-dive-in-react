@@ -21,7 +21,8 @@ function App() {
     ]);
 
     const addTask = (task)=>{
-        console.log(task);
+        
+
     }
 
     const deleteTask = (id) => {
