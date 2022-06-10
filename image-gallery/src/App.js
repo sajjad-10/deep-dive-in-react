@@ -1,9 +1,10 @@
+import React, { useState, useEffect } from "react";
+
 function App() {
-    return (
-        <div className="App">
-            <h1 className="text-3xl">Hello World</h1>
-        </div>
-    );
+    const [images, setImages] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [term, setTerm] = useState("[]");
+    return <div className="container mx-auto"></div>;
 }
 
 export default App;
