@@ -18,11 +18,11 @@ function App() {
     }, []);
     return (
         <div className="container mx-auto">
-            <div className="grid grid-cols-3 gap-4">
+            {isLoading? <h1 className="tex-6xl text-center mx-auto">Is Loading...</h1>:<div className="grid grid-cols-3 gap-4">
                 {images.map((image) => (
                     <ImageCard key={image.id} image={image}/>
                 ))}
-            </div>
+            </div>}
         </div>
     );
 }
