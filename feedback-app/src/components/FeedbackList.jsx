@@ -1,4 +1,3 @@
-import React from "react";
 import FeedbackItem from "./FeedbackItem";
 function FeedbackList({ feedback }) {
     if (!feedback || feedback.length === 0) {
@@ -13,5 +12,4 @@ function FeedbackList({ feedback }) {
         </div>
     );
 }
-
 export default FeedbackList;
