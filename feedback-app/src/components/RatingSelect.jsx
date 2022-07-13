@@ -1,10 +1,7 @@
-import { useState } from "react";
 
-function RatingSelect({select}) {
-    const [selected, setSelected] = useState(10);
+function RatingSelect({select ,selected}) {
     const handleChange = (e) => {
-        setSelected(+e.currentTarget.value) // + change to number because of default is string
-        select(+e.currentTarget.value)
+        select(+e.currentTarget.value) // + change to number because of default is string
       }    
     return (
         <ul className="rating">
