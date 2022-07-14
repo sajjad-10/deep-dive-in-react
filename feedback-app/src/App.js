@@ -9,6 +9,7 @@ import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 
+import { FeedbackProvider } from './context/FeedbackContext'
 function App() {
     const [feedback, setFeedback] = useState(FeedbackData)
     const addFeedback = (newFeedback) => {
@@ -19,22 +20,24 @@ function App() {
         if (window.confirm('Are you sure, you want to delete?')) { setFeedback(feedback.filter((item) => item.id !== id)) }
     }
     return (
-        <Router>
-            <Header />
-            <div className="container">
-                <Routes>
-                    <Route exact path='/' element={<>
-                        <FeedbackForm handleAdd={addFeedback} />
-                        <FeedbackStats feedback={feedback} />
-                        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-                    </>}>
+        <FeedbackProvider>
+            <Router>
+                <Header />
+                <div className="container">
+                    <Routes>
+                        <Route exact path='/' element={<>
+                            <FeedbackForm handleAdd={addFeedback} />
+                            <FeedbackStats feedback={feedback} />
+                            <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                        </>}>
 
-                    </Route>
-                    <Route path='/about' element={<AboutPage />} />
-                </Routes>
-                <AboutIconLink/>
-            </div>
-        </Router>
+                        </Route>
+                        <Route path='/about' element={<AboutPage />} />
+                    </Routes>
+                    <AboutIconLink />
+                </div>
+            </Router>
+        </FeedbackProvider>
 
     );
 }
