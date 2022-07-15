@@ -33,13 +33,29 @@ export const FeedbackProvider = ({ children }) => {
             setFeedback(feedback.filter((item) => item.id !== id));
         }
     };
+
+    //Update feedback item
+    const updateFeedback = (id, updItem) => {
+        setFeedback(
+            feedback.map((item) =>
+                item.id === id ? { ...item, ...updItem } : item
+            )
+        );
+    };
     // Set item to be unbated
     const editFeedback = (item) => {
         setFeedbackEdit({ item, edit: true });
     };
     return (
         <FeedbackContext.Provider
-            value={{ feedback, deleteFeedback, addFeedback, editFeedback }}
+            value={{
+                feedback,
+                feedbackEdit,
+                deleteFeedback,
+                addFeedback,
+                editFeedback,
+                updateFeedback,
+            }}
         >
             {children}
         </FeedbackContext.Provider>

@@ -1,8 +1,7 @@
-
-function RatingSelect({select ,selected}) {
+function RatingSelect({ select, selected }) {
     const handleChange = (e) => {
-        select(+e.currentTarget.value) // + change to number because of default is string
-      }    
+        select(+e.currentTarget.value); // + change to number because of default is string
+    };
     return (
         <ul className="rating">
             {Array.from({ length: 10 }, (_, i) => (
