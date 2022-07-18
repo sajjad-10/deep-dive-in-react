@@ -19,7 +19,7 @@ function UserItem({ user: { login, avatar_url, html_url } }) {
                 <div>
                     <h2 className="card-title">{login}</h2>
                     <Link
-                        to={`/users/${login}`}
+                        to={`/user/${login}`}
                         className="btn btn-dark btn-sm my-1"
                     >
                         More
