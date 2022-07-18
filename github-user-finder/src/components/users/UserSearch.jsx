@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import GithubContext from "../../context/github/GithubContext";
 
 function UserSearch() {
-    const [text, setText] = useState();
+    const [text, setText] = useState('');
 
     const { users, searchUsers, clearUsers } = useContext(GithubContext);
 
