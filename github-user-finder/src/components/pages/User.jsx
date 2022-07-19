@@ -7,12 +7,14 @@ import Spinner from "../layout/Spinner";
 import RepoList from "../repos/RepoList";
 
 function User() {
-    const { user, getUser, loading, getUserRepos,repos } = useContext(GithubContext);
+    const { user, getUser, loading, getUserRepos, repos } =
+        useContext(GithubContext);
 
     const params = useParams();
     useEffect(() => {
         getUser(params.login);
         getUserRepos(params.login);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const {
@@ -163,7 +165,7 @@ function User() {
                         </div>
                     </div>
                 </div>
-                <RepoList repos={repos}/>
+                <RepoList repos={repos} />
             </div>
         </>
     );
