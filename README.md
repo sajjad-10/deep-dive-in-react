@@ -2,6 +2,7 @@
 
 in this repo we try to learn react. with applied project. Let's Go dive.
 
-| Name         | git Link                                                                       |
-| ------------ | ------------------------------------------------------------------------------ |
-| Feedback App | [Link](https://github.com/sajjad-10/deep-dive-in-react/tree/main/feedback-app) |
+| Name               | git Link                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| Feedback App       | [Link](https://github.com/sajjad-10/deep-dive-in-react/tree/main/feedback-app)       |
+| github User Finder | [Link](https://github.com/sajjad-10/deep-dive-in-react/tree/main/github-user-finder) |
