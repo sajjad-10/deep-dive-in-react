@@ -1,3 +1,4 @@
+import UseCallbackExample from "./components/UseCallbackExample";
 import UseMemoExample from "./components/UseMemoExample";
 import UseRefExample1 from "./components/UseRefExample1";
 import UseRefExample2 from "./components/UseRefExample2";
@@ -15,7 +16,10 @@ function App() {
             {/* <h1>useRef ex3:</h1>
             <UseRefExample3/> */}
 
-            <UseMemoExample />
+            {/* <UseMemoExample /> */}
+
+            <h1>useCallback:</h1>
+            <UseCallbackExample />
         </div>
     );
 }
